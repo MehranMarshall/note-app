@@ -10,6 +10,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+/* Note.js styles */ 
 .note {
     display: flex;
     flex-direction: column;
@@ -27,4 +28,34 @@
     font-size: 17px;
     font-weight: 700;
     font-family: "Poppins";
+}
+
+/* AddNote.js specefic styles */
+.addNote {
+    background-color: #7fffd4;
+}
+
+.area {
+    outline: 0;
+    border: 0;
+    width: 100%;
+    height: auto;
+    background-color: #7fffd4;
+    resize: none;
+}
+.save {
+    outline: 0;
+    border : none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #e1e1e1;
+    color: #000;
+    font-weight: 700;
+    transition: all .3s;
+}
+
+.save:hover {
+    background-color: #ededed;
 }
