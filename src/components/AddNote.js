@@ -3,13 +3,21 @@ import "../stylesheets/Note-Lists.css";
 
 export default function AddNote({ handleNote }) {
   const [noteText, setNoteText] = useState("");
+  const characterLimit = 200;
 
   const handleChange = (event) => {
-    setNoteText(event.target.value);
+    if (characterLimit - event.target.value.length >= 0) {
+      setNoteText(event.target.value);
+    }
   };
 
   const clickHandler = () => {
-    handleNote(noteText);
+    if (noteText.trim().length > 0) {
+      handleNote(noteText);
+      setNoteText("");
+    } else {
+      return alert("Enter a Task Please!");
+    }
   };
   return (
     <div className="addNote note">
@@ -23,7 +31,7 @@ export default function AddNote({ handleNote }) {
         onChange={handleChange}
       ></textarea>
       <div className="note-footer">
-        <small>200 Remaining</small>
+        <small>{characterLimit - noteText.length} Remaining</small>
         <button className="save" onClick={clickHandler}>
           Save
         </button>

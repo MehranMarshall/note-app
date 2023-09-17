@@ -19,6 +19,7 @@
     border-radius: 10px;
     padding: 15px;
     min-height: 200px;
+    white-space: pre-wrap;  /* keep space that added to the text */
 }
 
 .note-footer {
@@ -28,6 +29,10 @@
     font-size: 17px;
     font-weight: 700;
     font-family: "Poppins";
+}
+
+.deleteIcon {
+    cursor: pointer;
 }
 
 /* AddNote.js specefic styles */
@@ -58,4 +63,25 @@
 
 .save:hover {
     background-color: #ededed;
+}
+
+/* search component styels */
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #e1e1e1;
+    border-radius: 10px;
+}
+
+.search input {
+    outline: 0;
+    border: 0;
+    width: 100%;
+    padding: 5px;
+   background-color: #e1e1e1;
+   font-size: 15px;
 }
