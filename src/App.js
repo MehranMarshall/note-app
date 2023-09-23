@@ -12,7 +12,7 @@ function App() {
 
   // save to locale storage
   useEffect(() => {
-    localStorage.setItem("react-note-app-data", JSON.stringify(notes));
+    localStorage.setItem(-"react-note-app-data", JSON.stringify(notes));
   }, []);
 
   useEffect(() => {

@@ -24,6 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    word-wrap: break-word;
     background-color: #fef68a;
     border-radius: 10px;
     padding: 15px;
